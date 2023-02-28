@@ -1,0 +1,86 @@
+body {
+    background: url(background.jpeg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header {
+    font-family: 'Oxygen', monospace, Courier;
+    color: white;
+    padding-right: 15px;
+    margin-top: 20vh;
+    font-size: 6vw;
+    letter-spacing: 5px;
+    position: relative;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 850px) {
+    #header {
+        font-size: 10vw;
+        margin-right: 10%;
+    }
+}
+
+#cover {
+    font-family: 'Ubuntu', monospace, Courier;
+    position: relative;
+    width: 100%;
+    margin-top: 30vh;
+    padding-top: 5vh;
+    min-height: 130vh;
+    display: block;
+    overflow: auto;
+    color: white;
+    background: linear-gradient(0deg, rgba(20, 14, 8, 0.944) 0%, rgba(22,22,22,1) 70%);
+    word-wrap: normal;
+}
+
+#cover a:visited {
+    color: #d17f3f;
+}
+
+#cover a {
+    color: #d17f3f;
+}
+
+
+@media only screen and (min-height: 1081px) {
+    #cover {
+        min-height: 100vh;
+    }
+}
+
+#description-box {
+    margin: auto;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    font-size: 25px;
+    max-width: 850px;
+    position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+    #description-box {
+        font-size: 16px;
+    }
+}
+
+#description-box button {
+    background-color: #d17f3f;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 160px;
+    height: 60px;
+    border-radius: 35px;
+    font-size: 25px;
+}
