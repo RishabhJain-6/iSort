@@ -45,8 +45,8 @@ async function BubbleSort() {
                 bars[j + 1].childNodes[0].innerText = temp2;
             }
     
-            bars[j].style.backgroundColor = "rgb(0, 183, 255)";
-            bars[j + 1].style.backgroundColor = "rgb(0, 183, 255)";
+            bars[j].style.backgroundColor = "rgb(236, 190, 53)";
+            bars[j + 1].style.backgroundColor = "rrgb(236, 190, 53)";
             await new Promise((resolve) => setTimeout(() => { resolve(); }, delay));
         }
         bars[bars.length - i - 1].style.backgroundColor = "rgb(49, 226, 13)";
