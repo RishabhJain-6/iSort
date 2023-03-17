@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html
+      
     <head>
-        <title>iSort - The Sort Visualizer </title>\
+        <title>iSort - The Sort Visualizer </title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -17,6 +18,8 @@
     <body>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script type="text/javascript" src="javascript/index.js"></script>
+	
+	<!-- Side Navigation -->
         <div class="sidenav" id="sidenav">
             <a href="index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
             <div id="sep" class="no-remove"></div>
@@ -35,25 +38,26 @@
             <a href="#" class="sidenav-element no-remove">Radix Sort</a>
             <a href="#" class="sidenav-element no-remove">Shell Sort</a>
             <a href="#" class="sidenav-element no-remove">Comb Sort</a>
-            <!----   div class="sidenav-subtitle no-remove">CUSTOM</div>
-            <a href="/customsort" class="sidenav-element no-remove" style="margin-bottom: 40px;">Your Sort</a>      ---->
-
         </div>
 
         <div class="topnav">
             <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i class="material-icons icon">menu</i></button>
-            <a href="/" class="topnav-element">SORTING VISUALIZER</a>
-             
+            <a href="/" class="topnav-element">SORTING VISUALIZER</a> 
         </div>
         
+	<!-- Main text -->
 	<div id="header"><h1 class="header__title"><center><center>iSORT </center> The Witty Visualizer</center></h1></div>
 
 	<div id="cover">
+		
     		<div id="description-box">
+			
         		<h2 style="font-family: 'Electrolize', Courier, monospace;">
             			Sorting Algorithms
         		</h2>
+			
         		<div class="description-content">
+				
             			<p>
 					In computer science, a <a href="https://brilliant.org/wiki/sorting-algorithms/">Sorting algorithm</a> is an algorithm 
 					that puts a random set of numbers into an ascending or decending sequence. 
@@ -75,6 +79,7 @@
            				<code><var>n</var></code>, the number of the elements of the data sequence.<br><br>
            				Most of them fall into following categories:
             			</p>
+				
             			<ul>
                 			<li>Logarithmic<br>
                     				The complexity is proportional to the binary logarithm (i.e to the base 2) of <code><var>n</var></code>.<br>
@@ -89,25 +94,35 @@
 			 		 	An example of linear sorting algorithm is Counting Sort, with time complexity of O<code>(n+k)</code>.<br>
                 			</li>
             			</ul>
+				
             			<p>
                 			Space and time complexity can also be further subdivided into 3 different cases: <a href="https://www.geeksforgeeks.org/worst-average-and-best-case-analysis-of-algorithms/">
 		    			best case, average case and worst case</a>.
             			</p>
+				
             			<p>
                 			Some Sorting algorithms are easy to understand while some cause havoc in one's mind. While it's not easy to learn everything and it’s not a good recommendation
                 			to learn a piece of code, so here we are with a fun way of understanding the sorting algorithms with visual depiction of prominent ones. So, Let’s get into it....
             			</p>
+				
             			<button id="sort-btn" class="ripple-sort-btn open">Let's Sort Away!</button>
+				
         		</div>
+			
     		</div>
+		
 	</div>
 
 
 
         <footer class="footer">
+		
             <div class="footer-container">
+		    
                 <div class="footer-content" style="margin-left:0;">
+			
                     <span class="footer-title" style="font-family: 'Jura', Courier, monospace;">SORT VISUALIZER</span><br>
+			
 			<center>
 				Rishabh Jain<br>
 			    	Rishabh Chopra<br>
@@ -115,18 +130,25 @@
                     		Priyanshu Mishra
 			</center>
                 </div>
+		    
                 <div class="footer-content">
+			
 			<center><span class="footer-title">Contacts:</span></center>
 			 &emsp;rishabh4124@rla.du.ac.in<br>
                     	&emsp;rishabh4087@rla.du.ac.in<br>
 			&emsp;deepanshu4129@rla.du.ac.in<br>
                     	&emsp;priyanshu4035@rla.du.ac.in
+			
                 </div>
+		    
             </div>
 
             <div class="credits">
                 Got any reccomendation? <a href="#">It's Feedback Time</a>!
-            </div> 
+            </div>
+		
         </footer>
+	    
     </body>
+	
 </html>
