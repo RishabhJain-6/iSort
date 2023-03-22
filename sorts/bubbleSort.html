@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iSort - The Sort Visualizer </title>\
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+
+        <link href="../css/SideNavIcon.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../css/bubbleSort.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style2.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style.css">
+    </head>
+
+    <body>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="../javascript/index.js"></script>
+        <div class="sidenav" id="sidenav">
+            <a href="../index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
+            <div id="sep" class="no-remove"></div>
+            <div class="sidenav-title no-remove"><i class="material-icons icon">sort</i> Sorts</div>
+            <a href="#" class="sidenav-element no-remove">Quick Sort</a>
+            <a href="#" class="sidenav-element no-remove">Merge Sort</a>
+            <a href="#" class="sidenav-element no-remove">Heap Sort</a>
+            <a href="#" class="sidenav-element no-remove">Selection Sort</a>
+            <a href="#" class="sidenav-element no-remove">Insertion Sort</a>
+            <a href="#" class="sidenav-element no-remove">Counting Sort</a>
+            <a href="#" class="sidenav-element no-remove">Bucket Sort</a>
+            <a href="#" class="sidenav-element no-remove">Radix Sort</a>
+            <a href="#" class="sidenav-element no-remove">Pancake Sort</a>
+            <a href="#" class="sidenav-element no-remove">Bitonic Sort</a>
+            <a href="#" class="sidenav-element no-remove">Radix Sort</a>
+            <a href="#" class="sidenav-element no-remove">Shell Sort</a>
+            <a href="#" class="sidenav-element no-remove">Comb Sort</a>
+        </div>
+
+        <div class="topnav">
+            <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i class="material-icons icon">menu</i></button>
+            <a href="/" class="topnav-element">SORTING VISUALIZER</a>
+             
+        </div>
+      
+        <div class="screensplit">  
+           
+            <div class="hrsplit1">
+                <div class="vrsplit1"></div>
+
+                <div class="vrsplit2">
+                    <br>
+                    <br>
+                    <p id="line0">&nbsp BubbleSort(A[],n)</p>
+                    <p id="line1">&nbsp &nbsp 1. &nbsp For i = 0 to n - 1</p>
+                    <p id="line2">&nbsp &nbsp 2. &nbsp &nbsp For j = 0 to n - 1 - i</p>
+                    <p id="line3">&nbsp &nbsp 3. &nbsp &nbsp &nbsp If A[j]>A[j+1]</p>
+                    <p id="line4">&nbsp &nbsp 4. &nbsp &nbsp &nbsp &nbsp swap A[j] <-> A[j+1]</p>
+                    <p id="line5">&nbsp &nbsp 5. &nbsp &nbsp &nbsp End If</p>
+                    <p id="line6">&nbsp &nbsp 6. &nbsp &nbsp End For</p>
+                    <p id="line7">&nbsp &nbsp 7. &nbsp End For</p>
+                    <hr size="5" noshade>
+                    <center>
+                        <p style="color:aliceblue; margin: 0 0 0 0;" id="comp">No of Comparisons:</p>
+                    </center>
+                </div>   
+            </div>
+            <div class="hrsplit2">
+                <div class="split1">
+                    <div style="margin: auto; width: fit-content">
+
+                        <button class="btn1" type="button" onclick="generate()" id="Button1">
+                            Generate New Array
+                        </button>
+                        <input id="nele" type="number" min="1" max="500" value="25"></input>
+		
+
+                        <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                            Generate Random Array
+                        </button>
+                
+                        <button class="btn2" onclick="delaySet(),BubbleSort(),disable()" id="Button3">
+                            Bubble Sort
+                        </button>
+                
+                        <label style="color:rgba(248, 135, 7, 0.788);">Speed :</label>
+                        <input id="speeder" type="range" min="5" max="100" value="40"></input>
+
+                        <button class="btn2" id="pauseButton">
+                            Pause
+                        </button>
+                    </div>
+                </div>
+
+                <div class="split2">
+                    <center>
+                    <table>
+                        <tr>
+                            <center>
+                                <h3 style="margin-top: 0px;">Complexity </h3>
+                            </center>
+                        </tr>
+                        <tr>
+                            <td>Best Case (O)</td>
+                            <td>Average Case (<span class="symbol">Θ</span>)</td>
+                            <td>Worst Case (<span class="symbol">Ω</span>)</td>
+                        </tr>
+                        <tr>
+                            <td><code>O(n<sup>2</sup>)</code></td>
+                            <td><span class="symbol">Θ</span>(n<sup>2</sup>)</td>
+                            <td><span class="symbol">Ω</span>(n<sup>2</sup>)</td>
+                        </tr>
+                    </table>
+                </center>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../javascript/bubbleSort.js"></script>
+
+
+    <div id="cover">
+      <div id="description-box">
+          <h2 style="font-family: 'Electrolize', Courier, monospace;">
+              Sorting Algorithms
+          </h2>
+          <div class="description-content">
+              <p>
+        In computer science, a sorting algorithm is an algorithm that puts elements of a list into an order. 
+        The most frequently used orders are numerical order and lexicographical order, and either ascending or descending.
+      </p>
+              <p>
+                Efficient sorting is important for optimizing the efficiency of other algorithms (such as search and merge algorithms) that require input data to be in sorted lists. 
+        Sorting is also often useful for canonicalizing data and for producing human-readable output.
+              </p>
+      <p>
+              There are many different sorting algorithms, each with its own specific unique intuition and implementation.
+              They are classified according to two metrics: space complexity and time complexity.<br><br>
+               Those two kinds of complexity are represented with <a href="https://www.geeksforgeeks.org/asymptotic-analysis-comparison-sorting-algorithms/">asymptotic notations</a>, 
+      mainly with the symbols O, <span class="symbol">Θ</span>, <span class="symbol">Ω</span>, representing
+               respectively the upper bound, the tight bound, and the lower bound of the algorithm's complexity, specifying in brackets an expression in terms of
+               <code><var>n</var></code>, the number of the elements of the data structure.<br><br>
+               Most of them fall into two categories:
+              </p>
+              <ul>
+                  <li>Logarithmic<br>
+                      The complexity is proportional to the binary logarithm (i.e to the base 2) of <code><var>n</var></code>.<br>
+                      An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O<code>(n × log n)</code>.<br>
+                  </li>
+                  <li>Quadratic<br>
+                      The complexity is proportional to the square of <code><var>n</var></code>.<br>
+                      An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O<code>(n<sup>2</sup>)</code>.<br>
+                  </li>
+          <li>Linear<br>
+          The complexity approaches to linear time of <code><var>n</var></code>.<br>
+          An example of linear sorting algorithm is Counting Sort, with time complexity of O<code>(n+k)</code>.<br>
+                  </li>
+              </ul>
+              <p>
+                  Space and time complexity can also be further subdivided into 3 different cases: <a href="https://www.geeksforgeeks.org/worst-average-and-best-case-analysis-of-algorithms/">
+          best case, average case and worst case</a>.
+              </p>
+              <p>
+                  Some Sorting algorithms are easy to understand while some cause a havoc in one's mind. While its not easy to learn everything and noone does anyone recommend
+                  to learn a piece of code, so here we are with a fund way of understanding the sorting algorithms with visual depiction of prominent algorithms. So, Lets get into it....
+              </p>
+          </div>
+      </div>
+  </div>
+  
+    </body>
+</html>
