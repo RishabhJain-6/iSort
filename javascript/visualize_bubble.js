@@ -1,6 +1,7 @@
 const container = document.querySelector(".data-container");
 
 function generatebars(num = 20) {
+	container.innerHTML="";
     for (let i = 0; i < num; i += 1) {
 	    const value = Math.floor(Math.random() * 100) + 1;
 
@@ -68,9 +69,6 @@ async function BubbleSort() {
 
 generatebars();
 
-function generate() {
-    window.location.reload();
-}
 
 function disable() {
 
