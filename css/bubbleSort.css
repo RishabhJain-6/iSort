@@ -1,0 +1,94 @@
+
+  .screensplit {
+    background-color: white;
+    width: 100%; 
+    height: 100vh;
+  }
+  .hrsplit1 {
+    background-color: blanchedalmond; 
+    width:100%;
+    height: 70%;
+  }
+  
+  .hrsplit2{
+    background-color:green; 
+    width: 100%; 
+    height: 30%;
+  }
+  
+  .vrsplit1 {
+    background-color: black; 
+    width: 70%; 
+    height: 100%; 
+    float:left;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .vrsplit2 {
+    background-color: black; 
+    width:30%; 
+    height: 100%; 
+    float:left;
+    color: crimson;
+  }
+  .split1 {
+    width: 70%;
+    height: 100%;
+    float: left;
+    background-color: cornflowerblue;
+  }
+  .split2 {
+    width: 30%;
+    height: 100%;
+    float: left;
+    background-color:black;
+    color:aliceblue;
+  }
+
+  table,th {
+    border-color: aliceblue;
+    border: 2px solid;
+  }
+  td {
+    border-color: aliceblue;
+    border: 2px solid;
+    font-size: smaller;
+    align-items: center;
+  }
+
+.bar {
+    background-color: rgb(236, 190, 53);
+    transition: 0.3s all ease;
+    margin: 0 1px;
+    flex-grow: 1;
+    text-align: center;
+    }
+
+    .bar__id {
+      color: crimson;
+      font-size: xx-small;
+
+    }
+
+.btn1 {
+    padding: 12px;
+    font-weight: bolder;
+    background-color: #a54997;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    border: white;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    }
+.btn2 {
+    padding: 12px;
+    font-weight: bolder;
+    background-color: #c85cef;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    border: white;
+    }
