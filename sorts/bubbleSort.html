@@ -71,27 +71,33 @@
             <div class="hrsplit2">
                 <div class="split1">
                     <div style="margin: auto; width: fit-content">
-
-                        <button class="btn1" type="button" onclick="generate()" id="Button1">
-                            Generate New Array
-                        </button>
-                        <input id="nele" type="number" min="1" max="500" value="25"></input>
-		
-
-                        <button class="btn1" type="button" onclick="generate2()" id="Button2">
-                            Generate Random Array
-                        </button>
-                
-                        <button class="btn2" onclick="delaySet(),BubbleSort(),disable()" id="Button3">
-                            Bubble Sort
-                        </button>
-                
-                        <label style="color:rgba(248, 135, 7, 0.788);">Speed :</label>
-                        <input id="speeder" type="range" min="5" max="100" value="40"></input>
-
-                        <button class="btn2" id="pauseButton">
-                            Pause
-                        </button>
+                        <center>
+                            <br>
+                            <label style="color:rgba(248, 135, 7, 0.788);">Number of bars :</label>
+                            <input id="nele" type="number" min="1" max="500" value="25" oninput="generate()"></input>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                                Generate Random Array
+                            </button>
+                        
+                            &emsp;&emsp;
+                            <label style="color:rgba(248, 135, 7, 0.788);">Speed :</label>
+                            <input id="speeder" type="range" min="5" max="100" value="40"></input>
+                            <br>
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="btn1" type="button" onclick="generate()" id="Button1">
+                                Generate
+                            </button>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                            <button class="btn2" onclick="delaySet(),BubbleSort(),disable()" id="Button3">
+                                Bubble Sort
+                            </button>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                        
+                            <button class="btn2" id="pauseButton">
+                                Pause
+                            </button>
+                        </center>
                     </div>
                 </div>
 
