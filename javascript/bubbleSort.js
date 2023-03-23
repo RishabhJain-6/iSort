@@ -160,10 +160,10 @@ async function BubbleSort() {
     document.getElementById("Button1").style.backgroundColor = "#a54997";
     
     document.getElementById("Button2").disabled = false;
-    document.getElementById("Button2").style.backgroundColor = "#c85cef";
+    document.getElementById("Button2").style.backgroundColor = "#a54997";
 
     document.getElementById("Button3").disabled = false;
-    document.getElementById("Button3").style.backgroundColor = "#c85cef";
+    document.getElementById("Button3").style.backgroundColor = "#a54997";
 
     document.getElementById("speeder").disabled = false;
 
