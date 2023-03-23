@@ -51,7 +51,7 @@ function generate() {
 	var n = document.getElementById("nele");
 	var numele = parseInt(n.value);
 	if (numele>500) {
-		window.alert("Abe andha hona hai kya!? computer hai ghoda nahi ke sab kuch karega");
+		window.alert("Upper bound is 500 bars. Kindly choose a different value!");
 	}
 	else {
 		generatebars(numele);
