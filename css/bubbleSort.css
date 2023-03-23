@@ -38,7 +38,7 @@
     width: 70%;
     height: 100%;
     float: left;
-    background-color: cornflowerblue;
+    background-color: bisque;
   }
   .split2 {
     width: 30%;
@@ -87,7 +87,7 @@
 .btn2 {
     padding: 12px;
     font-weight: bolder;
-    background-color: #c85cef;
+    background-color: #a54997;
     border-radius: 10px;
     color: white;
     font-size: 16px;
