@@ -50,7 +50,12 @@ generatebars(25);
 function generate() {
 	var n = document.getElementById("nele");
 	var numele = parseInt(n.value);
-	generatebars(numele);
+	if (numele>500) {
+		window.alert("Abe Kya Dekh raha hai");
+	}
+	else {
+		generatebars(numele);
+	}
 }
 
 function generate2() {
