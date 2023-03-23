@@ -11,7 +11,7 @@ const compare = document.getElementById("comp");
 function generatebars(num) {
     container.innerHTML=""
     for (let i = 0; i < num; i += 1) {
-	    const value = Math.floor(Math.random() * (150 - 9) + 9) + 1;
+	    const value = Math.floor(Math.random() * (150-9)+9) + 1;
 
 	    const bar = document.createElement("div");
 
@@ -25,6 +25,7 @@ function generatebars(num) {
         if (num>80) {
             barLabel.style.display='none';
         }
+
 		if (num<=40) {
 			if (num<=10) {
 				barLabel.style.fontSize = 'xxx-large';
@@ -53,9 +54,10 @@ function generate() {
 }
 
 function generate2() {
-	const value = Math.floor(Math.random() * 100) + 1;
+	const value = Math.floor(Math.random() * 80) + 1;
 	generatebars(value);
 }
+
 function disable() {
 
     document.getElementById("Button1").disabled = true;
@@ -222,15 +224,11 @@ function delaySet() {
 
 pausePlayBtn.addEventListener('click', () => {
     if (isPlaying) {
-      // Pause the sorting algorithm
       isPlaying = false;
       pausePlayBtn.textContent = 'Pause';
-      // Code to pause the sorting algorithm goes here
     } else {
-      // Resume the sorting algorithm
       isPlaying = true;
       pausePlayBtn.textContent = 'Resume';
-      // Code to resume the sorting algorithm goes here
     }
   });
 
