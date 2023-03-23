@@ -32,6 +32,7 @@
     height: 100%; 
     float:left;
     color: crimson;
+    font-size:smaller;
   }
   .split1 {
     width: 70%;
