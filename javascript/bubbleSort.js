@@ -234,6 +234,6 @@ pausePlayBtn.addEventListener('click', () => {
     }
   });
 
-function Terminate() {
+function Term() {
     terminate=!terminate;
 }
