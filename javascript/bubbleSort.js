@@ -51,7 +51,7 @@ function generate() {
 	var n = document.getElementById("nele");
 	var numele = parseInt(n.value);
 	if (numele>500) {
-		window.alert("Abe Kya Dekh raha hai");
+		window.alert("Abe andha hona hai kya!? computer hai ghoda nahi ke sab kuch karega");
 	}
 	else {
 		generatebars(numele);
