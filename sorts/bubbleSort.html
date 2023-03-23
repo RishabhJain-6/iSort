@@ -84,18 +84,22 @@
 			    <label style="color:crimson;"><b>Speed :</b></label>
                             <input id="speeder" type="range" min="5" max="100" value="40" oninput="delaySet()"></input>
                             <br>
-                            &nbsp;&nbsp;&nbsp;
+                           &nbsp;&nbsp;&nbsp;
                             <button class="btn1" type="button" onclick="generate()" id="Button1">
                                 Generate
                             </button>
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                             <button class="btn2" onclick="delaySet(),BubbleSort(),disable()" id="Button3">
                                 Bubble Sort
                             </button>
-                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            &emsp;&emsp;&emsp;&emsp;&emsp;
                         
                             <button class="btn2" id="pauseButton">
                                 Pause
+                            </button>
+                            &emsp;&emsp;&emsp;
+                            <button class="btn2" id="terminateButton" onclick="Terminate()">
+                                Terminate
                             </button>
                         </center>
                     </div>
