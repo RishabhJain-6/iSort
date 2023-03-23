@@ -23,10 +23,7 @@ function generatebars(num) {
         if (num>80) {
             barLabel.style.display='none';
         }
-	    if (value<10) {
-		    barLabel.style.fontSize='xx-small';
-	    }
-		if (num<=40 && value>=10) {
+		if (num<=40) {
 			if (num<=10) {
 				barLabel.style.fontSize = 'xxx-large';
 			}
