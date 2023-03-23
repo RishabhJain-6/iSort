@@ -231,7 +231,3 @@ pausePlayBtn.addEventListener('click', () => {
       pausePlayBtn.textContent = 'Resume';
     }
   });
-
-function Term() {
-    terminate=!terminate;
-}
