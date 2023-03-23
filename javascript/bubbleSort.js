@@ -3,6 +3,8 @@ const container = document.querySelector(".vrsplit1");
 let isPlaying = false;
 const pausePlayBtn = document.getElementById("pauseButton");
 
+let terminate = false;
+
 var count = 0;
 const compare = document.getElementById("comp");
 
@@ -89,7 +91,49 @@ async function BubbleSort() {
             l2.style.backgroundColor = "cyan";
 
             while (isPlaying) {
+                if (terminate) {
+                    l2.style.backgroundColor = null;
+                    l0.style.backgroundColor = null;
+                    document.getElementById("Button1").disabled = false;
+                    document.getElementById("Button1").style.backgroundColor = "#a54997";
+        
+                    document.getElementById("Button2").disabled = false;
+                    document.getElementById("Button2").style.backgroundColor = "#a54997";
+    
+                    document.getElementById("Button3").disabled = false;
+                    document.getElementById("Button3").style.backgroundColor = "#a54997";
+    
+                    isPlaying = false;
+                    pausePlayBtn.textContent = 'Pause';
+
+                    for (let k=0;k<bars.length;k++) {
+                        bars[k].style.backgroundColor="rgb(236, 190, 53)";
+                    }
+
+                    terminate = !terminate;
+                    return;
+                }
                 await new Promise((resolve) => setTimeout(() => { resolve(); }, 1000));
+            }
+
+            if (terminate) {
+                l2.style.backgroundColor = null;
+                l0.style.backgroundColor = null;
+                document.getElementById("Button1").disabled = false;
+                document.getElementById("Button1").style.backgroundColor = "#a54997";
+    
+                document.getElementById("Button2").disabled = false;
+                document.getElementById("Button2").style.backgroundColor = "#a54997";
+
+                document.getElementById("Button3").disabled = false;
+                document.getElementById("Button3").style.backgroundColor = "#a54997";
+
+                for (let k=0;k<bars.length;k++) {
+                    bars[k].style.backgroundColor="rgb(236, 190, 53)";
+                }
+                
+                terminate = !terminate;
+                return;
             }
 
             var value1 = parseInt(bars[j].childNodes[0].innerHTML);
@@ -189,3 +233,7 @@ pausePlayBtn.addEventListener('click', () => {
       // Code to resume the sorting algorithm goes here
     }
   });
+
+function Terminate() {
+    terminate=!terminate;
+}
