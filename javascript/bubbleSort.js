@@ -64,8 +64,6 @@ function disable() {
 
     document.getElementById("Button3").disabled = true;
     document.getElementById("Button3").style.backgroundColor = "#d8b6ff";
-
-    document.getElementById("speeder").disable = true;
 }
 
 var delay = 5000;
@@ -164,8 +162,6 @@ async function BubbleSort() {
 
     document.getElementById("Button3").disabled = false;
     document.getElementById("Button3").style.backgroundColor = "#a54997";
-
-    document.getElementById("speeder").disabled = false;
 
     compare.textContent=' ' + " No of Comparisons: "+count;
     
