@@ -83,6 +83,7 @@
     border: white;
     margin-top: 1vw;
     margin-right: 1vw;
+    user-select:none;
     }
 .btn2 {
     padding: 12px;
@@ -92,6 +93,7 @@
     color: white;
     font-size: 16px;
     border: white;
+    user-select:none;
     }
 
   body {
