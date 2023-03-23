@@ -14,7 +14,7 @@ function generatebars(num) {
 	    const bar = document.createElement("div");
 
 	    bar.classList.add("bar");
-	    bar.style.height = `${value * 3}px`;
+	    bar.style.height = `${value/2}%`;
 
 		const barLabel = document.createElement("label");
 		barLabel.classList.add("bar__id");
