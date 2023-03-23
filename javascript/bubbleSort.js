@@ -9,7 +9,7 @@ const compare = document.getElementById("comp");
 function generatebars(num) {
     container.innerHTML=""
     for (let i = 0; i < num; i += 1) {
-	    const value = Math.floor(Math.random() * 200) + 1;
+	    const value = Math.floor(Math.random() * 150) + 1;
 
 	    const bar = document.createElement("div");
 
