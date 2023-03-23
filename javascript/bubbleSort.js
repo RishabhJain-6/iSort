@@ -20,11 +20,11 @@ function generatebars(num) {
 		barLabel.classList.add("bar__id");
 	    barLabel.innerHTML = value;
 
-        if (num>80) {
+        if (num>80 || value<10) {
             barLabel.style.display='none';
         }
-		if (num<=40) {
-			if (value>7 && num<=10) {
+		if (num<=40 && value>=10) {
+			if (num<=10) {
 				barLabel.style.fontSize = 'xxx-large';
 			}
             else if (num<=20) {
