@@ -139,54 +139,63 @@
         <script type="text/javascript" src="../javascript/bubbleSort.js"></script>
 
 
-    <div id="cover">
-      <div id="description-box">
-          <h2 style="font-family: 'Electrolize', Courier, monospace;">
-              Sorting Algorithms
-          </h2>
-          <div class="description-content">
-              <p>
-        In computer science, a sorting algorithm is an algorithm that puts elements of a list into an order. 
-        The most frequently used orders are numerical order and lexicographical order, and either ascending or descending.
-      </p>
-              <p>
-                Efficient sorting is important for optimizing the efficiency of other algorithms (such as search and merge algorithms) that require input data to be in sorted lists. 
-        Sorting is also often useful for canonicalizing data and for producing human-readable output.
-              </p>
-      <p>
-              There are many different sorting algorithms, each with its own specific unique intuition and implementation.
-              They are classified according to two metrics: space complexity and time complexity.<br><br>
-               Those two kinds of complexity are represented with <a href="https://www.geeksforgeeks.org/asymptotic-analysis-comparison-sorting-algorithms/">asymptotic notations</a>, 
-      mainly with the symbols O, <span class="symbol">Θ</span>, <span class="symbol">Ω</span>, representing
-               respectively the upper bound, the tight bound, and the lower bound of the algorithm's complexity, specifying in brackets an expression in terms of
-               <code><var>n</var></code>, the number of the elements of the data structure.<br><br>
-               Most of them fall into two categories:
-              </p>
-              <ul>
-                  <li>Logarithmic<br>
-                      The complexity is proportional to the binary logarithm (i.e to the base 2) of <code><var>n</var></code>.<br>
-                      An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O<code>(n × log n)</code>.<br>
-                  </li>
-                  <li>Quadratic<br>
-                      The complexity is proportional to the square of <code><var>n</var></code>.<br>
-                      An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O<code>(n<sup>2</sup>)</code>.<br>
-                  </li>
-          <li>Linear<br>
-          The complexity approaches to linear time of <code><var>n</var></code>.<br>
-          An example of linear sorting algorithm is Counting Sort, with time complexity of O<code>(n+k)</code>.<br>
-                  </li>
-              </ul>
-              <p>
-                  Space and time complexity can also be further subdivided into 3 different cases: <a href="https://www.geeksforgeeks.org/worst-average-and-best-case-analysis-of-algorithms/">
-          best case, average case and worst case</a>.
-              </p>
-              <p>
-                  Some Sorting algorithms are easy to understand while some cause a havoc in one's mind. While its not easy to learn everything and noone does anyone recommend
-                  to learn a piece of code, so here we are with a fund way of understanding the sorting algorithms with visual depiction of prominent algorithms. So, Lets get into it....
-              </p>
-          </div>
-      </div>
-  </div>
+        <div id="cover">
+            <div id="description-box">
+                <h2 style="font-family: 'Electrolize', Courier, monospace;">
+                    Bubble Sort
+                </h2>
+                <div class="description-content">
+                    <p>
+                        <b>What is the working mechanism of <a href="https://www.geeksforgeeks.org/bubble-sort/">Bubble Sort</a>, and what is 
+                            the origin of its name?</b> 
+                        <br> <br>
+                        The bubble sort algorithm gets its name from the way that bubbles rise to the surface of a liquid - larger bubbles rise 
+                        faster - larger elements "rise" to their correct positions faster in the list. During each pass through the list, 
+                        adjacent elements are compared and swapped if necessary, gradually "sorting" the elements as if they were rising to the surface 
+                        like bubbles.
+                    </p>
+                    <br>
+                    <p>
+                        <b>Is bubble sort a <a href="https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/">stable</a>, 
+                            <a href="https://www.geeksforgeeks.org/in-place-algorithm/">in-place</a> sorting algorithm or an out-of-place sorting algorithm?</b> 
+                        <br> <br>
+                        Bubble sort is a stable in-place algorithm, meaning that it does not require any extra space and maintains the relative order of duplicates.
+                    </p>
+                    <br>
+                    <p>
+                        <b>How does the number of elements impact the <a href="https://www.khanacademy.org/computing/ap-computer-science-
+                            principles/algorithms-101/evaluating-algorithms/a/measuring-an-algorithms-efficiency">efficiency</a> of Bubble sort?</b>
+                        <br> <br>
+                        The efficiency of Bubble sort is impacted by the size of the input list, and as the list size increases, 
+                        the number of iterations needed for the algorithm to sort the list also increases, which can result in poor 
+                        performance when sorting large lists, making it unsuitable for large-scale applications.
+                    </p>
+                    <p>
+                        <b>What are advantages and disadvantages of Bubble Sort?</b>
+                        <br> <br>
+                        Advantages:
+                        <ul>
+                            <li>Bubble sort is easy to understand and implement.</li>
+                            <li>It does not require any additional memory space.</li>
+                            <li>It's adaptability to different types of data.</li>
+                            <li>It is a stable sorting algorithm, meaning that elements with the same key value maintain their relative order in the sorted output.</li>
+                        </ul>
+                        <br>
+                        Disadvantages:
+                        <ul>
+                            <li>Bubble sort has a time complexity of O(n^2) which makes it very slow for large data sets.</li>
+                            <li>It is not efficient for large data sets, because it requires multiple passes through the data.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+		    <div class="credits">
+                Got any reccomendation? <a href="#">It's Feedback Time</a>!
+            </div>
+        </footer>
   
     </body>
 </html>
