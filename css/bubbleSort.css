@@ -86,24 +86,24 @@
     }
 
 .btn1 {
-    padding: 12px;
+    padding: 10px;
     font-weight: bolder;
     background-color: #a54997;
     border-radius: 10px;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     border: white;
     margin-top: 1vw;
     margin-right: 1vw;
     user-select:none;
     }
 .btn2 {
-    padding: 12px;
+    padding: 10px;
     font-weight: bolder;
     background-color: #a54997;
     border-radius: 10px;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     border: white;
     user-select:none;
     }
