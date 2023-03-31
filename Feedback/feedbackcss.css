@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#div1 {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    border-radius: 15px;
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    margin: -50px 0 0 -50px;
+}
+
+#div5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio {
+    display: none;
+   
+}
+
+.emoji {
+    font-size: 40px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.button{
+    height: 40px;
+    width: 70px;
+    margin:20px;
+    background:burlywood;
+}
+.button:hover {
+  color: rgba(255, 0, 0, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+#sad:checked~.emoji1,
+#average:checked~.emoji2,
+#happy:checked~.emoji3 {
+    background-color: blanchedalmond;
+}
+
+@media (min-width: 1700px) {
+  #div1 {
+	font-size:25px;
+	top: 20%;
+  }
+}
