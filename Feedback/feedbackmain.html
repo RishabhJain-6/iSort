@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+	Feedback Form
+    </title>
+    <link rel="stylesheet" href="feedbackcss.css">
+    <script>
+        function validateForm() {
+            var name = document.forms["feedbackForm"]["name"].value;
+            var age = document.forms["feedbackForm"]["name"].value;
+            var email = document.forms["feedbackForm"]["email"].value;
+            var message = document.forms["feedbackForm"]["message"].value;
+
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation. 
+            var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+
+
+            if (name == "" || regName.test(name)) {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (age == "") {
+                alert("Name must be filled out correctly");
+                return false;
+            }
+
+            if (email == "" || !regEmail.test(email)) {
+                alert("Email must be filled out correctly");
+                return false;
+            }
+
+            if (message == "") {
+                alert("Message must be filled out");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body background="bg.jpg" style="background-repeat:no-repeat; background-size:100% 100vh;">
+    <center>
+        <div id="div1" style="background-color: rgba(0, 0, 0, 0.7)">
+            <h1 font-size : 70px style="margin:20px;">Feedback Form</h1>
+            <form name="feedbackform" action="mailto:deepanshu4129@rla.du.ac.in; priyanshu4035@rla.du.ac.in; rishabh4124@rla.du.ac.in; rishabh4087@rla.du.ac.in" method="post"
+                onsubmit="return validateForm()" enctype="text/plain">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for"age">Age:</label>
+                <input type="number" min="15" max="100" name="Age" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="" text-align:left>Rating:</label>
+                <div id="response">
+                    <input type="radio" id="sad" name="response" value="sad" class="radio" />
+                    <label class="emoji emoji1" for="sad">&#128542</label>
+
+                    <input type="radio" name="response" id="average" value="average" class="radio" />
+                    <label class="emoji emoji2" for="average">&#128528</label>
+
+                    <input type="radio" name="response" id="happy" value="happy" class="radio" />
+                    <label class="emoji emoji3" for="happy"> &#128522</label>
+                </div>
+                <br>
+                <label id="label1" for="message">Message</label> <br>
+                <textarea id="message" name="message" rows="7" cols="40"></textarea><br><br>
+
+                <input type="submit" value="Submit" class="button">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Reset" class="button">
+            </form>
+        </div>
+    </center>
+
+</body>
+
+</html>
