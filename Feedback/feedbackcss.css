@@ -56,9 +56,3 @@
 	top: 20%;
   }
 }
-
-@media only screen and (max-width: 768px) {
-  #div1 {
-    font-size: 25px;
-  }
-}
