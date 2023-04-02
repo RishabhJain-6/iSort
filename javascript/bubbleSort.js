@@ -51,7 +51,7 @@ function generate() {
 	var n = document.getElementById("nele");
 	var numele = parseInt(n.value);
     if (numele>400) {
-        window.alert("Upper bound is 500 bars. Kindly choose a value in that range!");
+        window.alert("Upper bound is 400 bars. Kindly choose a value in that range!");
         n.value=400;
         generate();
     }
