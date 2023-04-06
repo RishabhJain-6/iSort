@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iSort - The Sort Visualizer </title>\
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+
+        <link href="../css/SideNavIcon.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../css/visualize.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style2.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style.css">
+    </head>
+
+    <body>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="../javascript/index.js"></script>
+        <div class="sidenav" id="sidenav">
+            <a href="../index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
+            <div id="sep" class="no-remove"></div>
+            <div class="sidenav-title no-remove"><i class="material-icons icon">sort</i> Sorts</div>
+            <a href="bubbleSort.html" class="sidenav-element no-remove">Bubble Sort</a>
+            <a href="#" class="sidenav-element no-remove">Selection Sort</a>
+            <a href="#" class="sidenav-element no-remove">Insertion Sort</a>
+			      <a href="#" class="sidenav-element no-remove">Quick Sort</a>
+			      <a href="#" class="sidenav-element no-remove">Randomized Quick</a>
+            <a href="#" class="sidenav-element no-remove">Merge Sort</a>
+            <a href="#" class="sidenav-element no-remove">Heap Sort</a>
+        </div>
+
+        <div class="topnav">
+            <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i class="material-icons icon">menu</i></button>
+            <a href="/" class="topnav-element">SORTING VISUALIZER - GNOME SORT</a>
+             
+        </div>
+      
+        <div class="screensplit">  
+           
+            <div class="hrsplit1">
+                <div class="vrsplit1"></div>
+
+                <div class="vrsplit2">
+                    <br>
+                    <p id="line0">&nbsp GnomeSort(A[],n)</p>
+                    <p id="line1">&nbsp &nbsp 1. &nbsp idx = 0</p>
+                    <p id="line2">&nbsp &nbsp 2. &nbsp &nbsp While (idx < n) </p>
+                    <p id="line3">&nbsp &nbsp 3. &nbsp &nbsp &nbsp If (idx == 0) or (A[idx] >= A[idx-1])</p>
+                    <p id="line4">&nbsp &nbsp 4. &nbsp &nbsp &nbsp &nbsp idx = idx + 1</p>
+                    <p id="line5">&nbsp &nbsp 5. &nbsp &nbsp &nbsp Else :</p>
+                    <p id="line6">&nbsp &nbsp 6. &nbsp &nbsp &nbsp &nbsp swap A[idx] <-> A[idx - 1]</p>
+                    <p id="line7">&nbsp &nbsp 7. &nbsp &nbsp &nbsp &nbsp idx = idx - 1</p>
+                    <hr size="3" noshade>
+                    <center>
+                        <h4 style="color:aliceblue; margin: 0 0 0 0;" id="comp">No of Comparisons:</h4>
+                    </center>
+                    <hr size="3" noshade>
+                </div>   
+            </div>
+            <div class="hrsplit2">
+                <div class="split1">
+                    <div style="margin: auto; width: fit-content">
+                        <center>
+                            
+                            <label style="color:crimson; font-size: 20px;"><b>Number of bars :</b></label>
+                            <input id="nele" type="number" min="1" max="400" value="25"></input>
+
+                            &emsp;
+
+                            <button class="btn1" type="button" onclick="generatebest()" id="Button4">
+                                Generate Best Case Input
+                            </button>
+
+                            <button class="btn1" type="button" onclick="generateworst()" id="Button5">
+                                Generate Worst Case Input
+                            </button>
+                        
+                            &emsp;
+                            <label style="color:crimson; font-size: 20px;"><b>Speed :</b></label>
+                            <input id="speeder" type="range" min="5" max="100" value="40" oninput="delaySet()"></input>
+                            <br>
+
+                            <button class="btn1" type="button" onclick="generate()" id="Button1">
+                                Generate
+                            </button>
+                            &emsp;
+                            <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                                Generate Random Array
+                            </button>
+                            &emsp;
+                            <button class="btn2" onclick="delaySet(),GnomeSort(),disable()" id="Button3">
+                                Gnome Sort
+                            </button>
+                            &emsp;&emsp;
+                        
+                            <button class="btn2" id="pauseButton">
+                                Pause
+                            </button>
+                            &emsp;&emsp;
+                            <button class="btn2" id="terminateButton" onclick="terminate=true;">
+                                Terminate
+                            </button>
+                        </center>
+                    </div>
+                </div>
+
+                <div class="split2">
+                    <center>
+                    <table style="border-collapse: collapse;">
+                        <tr>
+                            <center>
+                                <h4 style="margin-top: 0px; margin-bottom: 5px;">Complexity </h4>
+                            </center>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <center>Time</center>
+                            </td>
+                            <td>
+                                Space
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best Case</td>
+                            <td>Average Case</td>
+                            <td>Worst Case</td>
+                            <td rowspan="2"> <center>O(1)</center> </td>
+                        </tr>
+                        <tr>
+                            <td><center>O(n)</center></td>
+                            <td><center>O(n<sup>2</sup>)</center></td>
+                            <td><center>O(n<sup>2</sup>)</center></td>
+                        </tr>
+                    </table>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../javascript/gnomeSort.js"></script>
+
+
+        <div id="cover">
+            <div id="description-box">
+                <h2 style="font-family: 'Electrolize', Courier, monospace;">
+                    Gnome Sort
+                </h2>
+                <div class="description-content">
+                    <p>
+                        <b>What is the working mechanism of <a href="https://www.geeksforgeeks.org/gnome-sort-a-stupid-one/">Gnome Sort</a>, and what is 
+                            the origin of its name?</b> 
+                        <br> <br>
+                        Gnome sort is a simple sorting algorithm that swaps adjacent elements until the list is sorted. A "gnome" moves backward 
+                        through the list, making it more efficient than bubble sort. The name "gnome sort" refers to a "gnome" rearranging a garden.
+                    </p>
+                    <br>
+                    <p>
+                        <b>Is gnome sort a <a href="https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/">stable</a>, 
+                            <a href="https://www.geeksforgeeks.org/in-place-algorithm/">in-place</a> sorting algorithm or an out-of-place sorting algorithm?</b> 
+                        <br> <br>
+                        Gnome sort is a stable in-place algorithm, meaning that it does not require any extra space and maintains the relative order 
+                        of duplicates.
+                    </p>
+                    <br>
+                    <p>
+                        <b>How does the number of elements impact the <a href="https://www.khanacademy.org/computing/ap-computer-science-
+                            principles/algorithms-101/evaluating-algorithms/a/measuring-an-algorithms-efficiency">efficiency</a> of Gnome sort?</b>
+                        <br> <br>
+                        Gnome sort's efficiency depends on the number of elements. Worst-case scenario takes O(n^2) swaps, making it slow for large lists. 
+                        However, it performs better than bubble sort on average. Gnome sort is best suited for small to medium-sized lists.
+                    </p>
+                    <p>
+                        <b>What are advantages and disadvantages of Gnome Sort?</b>
+                        <br> <br>
+                        Advantages:
+                        <ul>
+                            <li>Bubble sort is simple algorithm that is easy to implement and understand.</li>
+                            <li>It does not require any additional memory space.</li>
+                            <li>Gnome sort can be easily modified to work with different data structures, making it a versatile algorithm.</li>
+                            <li>Gnome sort performs well on partially sorted lists.</li>
+                        </ul>
+                        <br>
+                        Disadvantages:
+                        <ul>
+                            <li>Gnome sort has a time complexity of O(n^2) which makes it inefficient for large lists.</li>
+                            <li>It is not suitable for complex data structures.</li>
+                            <li>It is not a stable algorithm on all implementations.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+		    <div class="credits">
+                Got any reccomendation? <a href="../Feedback/isortfeedback.html">It's Feedback Time</a>!
+            </div>
+        </footer>
+  
+    </body>
+</html>
