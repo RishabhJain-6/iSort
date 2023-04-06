@@ -289,6 +289,8 @@ async function BubbleSort() {
             l2.style.backgroundColor = null;
         }
         count = count + c2;
+	    
+	compare.textContent=' ' + " No of Comparisons: "+count;
 
         var l6 = document.getElementById("line6");
         l6.style.backgroundColor = "cyan";
