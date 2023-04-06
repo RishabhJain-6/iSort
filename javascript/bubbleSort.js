@@ -210,6 +210,8 @@ async function BubbleSort() {
     
                     isPlaying = false;
                     pausePlayBtn.textContent = 'Pause';
+			
+		    compare.textContent=' ' + " No of Comparisons: ";
 
                     for (let k=0;k<bars.length;k++) {
                         bars[k].style.backgroundColor="rgb(236, 190, 53)";
@@ -242,6 +244,8 @@ async function BubbleSort() {
                 for (let k=0;k<bars.length;k++) {
                     bars[k].style.backgroundColor="rgb(236, 190, 53)";
                 }
+		    
+		compare.textContent=' ' + " No of Comparisons: ";
 
                 terminate = !terminate;
                 return;
@@ -260,6 +264,7 @@ async function BubbleSort() {
                 l4.style.backgroundColor = "cyan";
 
                 bars[j].style.backgroundColor = "red";
+		await new Promise((resolve) => setTimeout(() => { resolve(); }, delay));
                 bars[j + 1].style.backgroundColor = "red";
     
                 var temp1 = bars[j].style.height;
