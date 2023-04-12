@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iSort - The Sort Visualizer </title>\
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+
+        <link href="../css/SideNavIcon.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../css/visualize.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style2.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style.css">
+    </head>
+
+    <body>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="../javascript/index.js"></script>
+        <div class="sidenav" id="sidenav">
+            <a href="../index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
+            <div id="sep" class="no-remove"></div>
+            <div class="sidenav-title no-remove"><i class="material-icons icon">sort</i> Sorts</div>
+            <a href="#" class="sidenav-element no-remove">Selection Sort</a>
+            <a href="bubbleSort.html" class="sidenav-element no-remove">Bubble Sort</a>
+	    <a href="#" class="sidenav-element no-remove">Quick Sort</a>
+	    <a href="#" class="sidenav-element no-remove">Randomized Quick</a>
+            <a href="#" class="sidenav-element no-remove">Merge Sort</a>
+            <a href="#" class="sidenav-element no-remove">Heap Sort</a>
+	    <a href="gnomeSort.html" class="sidenav-element no-remove">Gnome Sort</a>
+        </div>
+
+        <div class="topnav">
+            <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i class="material-icons icon">menu</i></button>
+            <a href="/" class="topnav-element">SORTING VISUALIZER - INSERTION SORT</a>
+             
+        </div>
+      
+        <div class="screensplit">  
+           
+            <div class="hrsplit1">
+                <div class="vrsplit1"></div>
+
+                <div class="vrsplit2">
+                    <br>
+                    <p id="line0">&nbsp InsertionSort(A[],n)</p>
+                    <p id="line1">&nbsp &nbsp 1. &nbsp For i = 1 to n</p>
+                    <p id="line2">&nbsp &nbsp 2. &nbsp &nbsp Key<-Arr[i]</p>
+                    <p id="line3">&nbsp &nbsp 3. &nbsp &nbsp j<-[i-1]</p>
+                    <p id="line4">&nbsp &nbsp 4. &nbsp &nbsp while(j>0 and Arr[j]>Key)</p>
+                    <p id="line5">&nbsp &nbsp 5. &nbsp &nbsp &nbsp &nbsp A[j+1]<-A[j]</p>
+                    <p id="line6">&nbsp &nbsp 6. &nbsp &nbsp &nbsp &nbsp j<-j-1</p>
+                    <p id="line7">&nbsp &nbsp 7. &nbsp &nbsp A[j+1]<-Key</p>
+                    <hr size="3" noshade>
+                    <center>
+                        <h4 style="color:aliceblue; margin: 0 0 0 0;" id="comp">No of Comparisons:</h4>
+                    </center>
+		    <hr size="3" noshade>
+                </div>   
+            </div>
+            <div class="hrsplit2">
+                <div class="split1">
+                    <div style="margin: auto; width: fit-content">
+                        <center>
+                            
+                            <label style="color:crimson; font-size: 20px;"><b>Number of bars :</b></label>
+                            <input id="nele" type="number" min="1" max="400" value="25"></input>
+
+                            &emsp;
+
+                            <button class="btn1" type="button" onclick="generatebest()" id="Button4">
+                                Generate Best Case Input
+                            </button>
+
+                            <button class="btn1" type="button" onclick="generateworst()" id="Button5">
+                                Generate Worst Case Input
+                            </button>
+                        
+                            &emsp;
+                            <label style="color:crimson; font-size: 20px;"><b>Speed :</b></label>
+                            <input id="speeder" type="range" min="5" max="100" value="40" oninput="delaySet()"></input>
+                            <br>
+
+                            <button class="btn1" type="button" onclick="generate()" id="Button1">
+                                Generate
+                            </button>
+                            &emsp;
+                            <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                                Generate Random Array
+                            </button>
+                            &emsp;
+                            <button class="btn2" onclick="delaySet(),InsertionSort(),disable()" id="Button3">
+                                Insertion Sort
+                            </button>
+                            &emsp;&emsp;
+                        
+                            <button class="btn2" id="pauseButton">
+                                Pause
+                            </button>
+                            &emsp;&emsp;
+                            <button class="btn2" id="terminateButton" onclick="terminate=true;">
+                                Terminate
+                            </button>
+                        </center>
+                    </div>
+                </div>
+
+                <div class="split2">
+                    <center>
+                    <table style="border-collapse: collapse;">
+                        <tr>
+                            <center>
+                                <h4 style="margin-top: 0px; margin-bottom: 5px;">Complexity </h4>
+                            </center>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <center>Time</center>
+                            </td>
+                            <td>
+                                Space
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best Case</td>
+                            <td>Average Case</td>
+                            <td>Worst Case</td>
+                            <td rowspan="2"> <center>O(1)</center> </td>
+                        </tr>
+                        <tr>
+                            <td><center>O(n)</center></td>
+                            <td><center>O(n<sup>2</sup>)</center></td>
+                            <td><center>O(n<sup>2</sup>)</center></td>
+                        </tr>
+                    </table>
+                </center>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../javascript/insertionSort.js"></script>
+
+
+        <div id="cover">
+            <div id="description-box">
+                <h2 style="font-family: 'Electrolize', Courier, monospace;">
+                    Insertion Sort
+                </h2>
+                <div class="description-content">
+                    <p>
+                        <b>What is the working mechanism of <a href="https://www.geeksforgeeks.org/insertion-sort/">Insertion Sort</a>, and what is 
+                            the origin of its name?</b> 
+                        <br> <br>
+                        Insertion sort is a simple sorting algorithm that works
+			similar to the way you sort playing cards in your hands. 
+			The array is virtually split into a sorted and an unsorted part. 
+      			Values from the unsorted part are picked and placed at the correct 
+			position in the sorted part.
+                    </p>
+                    <br>
+                    <p>
+                        <b>Is insertion sort a <a href="https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/">stable</a>, 
+                            <a href="https://www.geeksforgeeks.org/in-place-algorithm/">in-place</a> sorting algorithm or an out-of-place sorting algorithm?</b> 
+                        <br> <br>
+                        Insertion sort is a stable in-place algorithm, meaning that it does not require any extra space and maintains the relative order of duplicates.
+                    </p>
+                    <br>
+                    <p>
+                        <b>How does the number of elements impact the <a href="https://www.khanacademy.org/computing/ap-computer-science-
+                            principles/algorithms-101/evaluating-algorithms/a/measuring-an-algorithms-efficiency">efficiency</a> of insertion sort?</b>
+                        <br> <br>
+                        The efficiency of insertion sort is impacted by the size of the input list, and as the list size increases, 
+                        the number of iterations needed for the algorithm to sort the list also increases, which can result in poor 
+                        performance when sorting large lists, making it unsuitable for large-scale applications.
+                    </p>
+		    <br>
+                    <p>
+                        <b>What are advantages and disadvantages of insertion Sort?</b>
+                        <br> <br>
+                        Advantages:
+                        <ul>
+                            <li>Insertion sort is easy to understand and implement.</li>
+                            <li>It does not require any additional memory space.</li>
+                            <li>It's adaptability to different types of data.</li>
+                            <li>It is a stable sorting algorithm, meaning that elements with the same key value maintain their relative order in the sorted output.</li>
+                        </ul>
+                        <br>
+                        Disadvantages:
+                        <ul>
+                            <li>Insertion sort has a time complexity of O(n^2) which makes it very slow for large data sets.</li>
+                            <li>It is not efficient for large data sets, because it requires multiple passes through the data.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+		    <div class="credits">
+                Got any reccomendation? <a href="../Feedback/feedbackmain.html">It's Feedback Time!</a>
+            </div>
+        </footer>
+  
+    </body>
+</html>
