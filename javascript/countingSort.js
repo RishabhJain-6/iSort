@@ -187,6 +187,8 @@ async function CountingSort() {
 
             isPlaying = false;
             pausePlayBtn.textContent = 'Pause';
+	    
+	    terminate = !terminate;
 
             compare.textContent=' ' + " No of Comparisons: ";
 
@@ -266,6 +268,8 @@ async function CountingSort() {
     
                 isPlaying = false;
                 pausePlayBtn.textContent = 'Pause';
+		    
+		terminate = !terminate;
     
                 compare.textContent=' ' + " No of Comparisons: ";
     
@@ -348,6 +352,8 @@ async function CountingSort() {
     
                 isPlaying = false;
                 pausePlayBtn.textContent = 'Pause';
+		    
+		terminate = !terminate;
     
                 compare.textContent=' ' + " No of Comparisons: ";
     
@@ -445,6 +451,8 @@ async function CountingSort() {
     
                 isPlaying = false;
                 pausePlayBtn.textContent = 'Pause';
+		    
+		terminate = !terminate;
     
                 compare.textContent=' ' + " No of Comparisons: ";
     
