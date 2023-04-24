@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iSort - The Sort Visualizer </title>\
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+
+        <link href="../css/SideNavIcon.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../css/visualize_linear.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style2.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style.css">
+    </head>
+
+    <body>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="../javascript/index.js"></script>
+        <div class="sidenav" id="sidenav">
+            <a href="../index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
+            <div id="sep" class="no-remove"></div>
+            <div class="sidenav-title no-remove"><i class="material-icons icon">sort</i> Sorts</div>
+            <a href="bubbleSort.html" class="sidenav-element no-remove">Bubble Sort</a>
+            <a href="selectionSort.html" class="sidenav-element no-remove">Selection Sort</a>
+            <a href="insertionSort.html" class="sidenav-element no-remove">Insertion Sort</a>
+			<a href="#" class="sidenav-element no-remove">Quick Sort</a>
+			<a href="#" class="sidenav-element no-remove">Randomized Quick</a>
+            <a href="#" class="sidenav-element no-remove">Merge Sort</a>
+            <a href="#" class="sidenav-element no-remove">Heap Sort</a>
+			<a href="gnomeSort.html" class="sidenav-element no-remove">Gnome Sort</a>
+        </div>
+
+        <div class="topnav">
+            <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i class="material-icons icon">menu</i></button>
+            <a href="/" class="topnav-element">SORTING VISUALIZER - COUNTING SORT</a>
+             
+        </div>
+      
+        <div class="screensplit">  
+           
+            <div class="hrsplit1">
+                <div class="vrsplit1">
+                    <div class="mainarray"></div>
+                    <div class="countarray"></div>
+                </div>
+
+                <div class="vrsplit2">
+                    <br>
+                    <p id="line0">&nbsp CountingSort(A[],n)</p>
+                    <p id="line1">&nbsp &nbsp 1. &nbsp Initialize count array C[k] <br>&nbsp &nbsp &nbsp &nbsp where k=maxele(A)</p>
+                    <p id="line2">&nbsp &nbsp 2. &nbsp For j = 0 to n - 1</p>
+                    <p id="line3">&nbsp &nbsp 3. &nbsp &nbsp do C[A[j]]=C[A[j]]+1</p>
+                    <p id="line4">&nbsp &nbsp 4. &nbsp For j = 1 to k</p>
+                    <p id="line5">&nbsp &nbsp 5. &nbsp &nbsp do C[j] += C[j-1]</p>
+                    <p id="line6">&nbsp &nbsp 6. &nbsp For j = n-1 to 0</p>
+                    <p id="line7">&nbsp &nbsp 7. &nbsp &nbsp B[C[A[j]]-1] = A[j]</p>
+                    <p id="line8">&nbsp &nbsp 8. &nbsp &nbsp C[A[j]] -= 1</p>
+                    <hr size="3" noshade>
+                </div>   
+            </div>
+            <div class="hrsplit2">
+                <div class="split1">
+                    <div style="margin: auto; width: fit-content">
+                        <center>
+                            
+                            <label style="color:crimson; font-size: 20px;"><b>Number of bars :</b></label>
+                            <input id="nele" type="number" min="1" max="400" value="25"></input>
+
+                            &emsp;
+
+                            <button class="btn1" type="button" onclick="generatebest()" id="Button4">
+                                Generate Best Case Input
+                            </button>
+
+                            <button class="btn1" type="button" onclick="generate2()" id="Button5">
+                                Generate Worst Case Input
+                            </button>
+                        
+                            &emsp;
+                            <label style="color:crimson; font-size: 20px;"><b>Speed :</b></label>
+                            <input id="speeder" type="range" min="5" max="100" value="40" oninput="delaySet()"></input>
+                            <br>
+
+                            <button class="btn1" type="button" onclick="generate()" id="Button1">
+                                Generate
+                            </button>
+                            &emsp;
+                            <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                                Generate Random Array
+                            </button>
+                            &emsp;
+                            <button class="btn2" onclick="delaySet(),CountingSort(),disable()" id="Button3">
+                                Counting Sort
+                            </button>
+                            &emsp;&emsp;
+                        
+                            <button class="btn2" id="pauseButton">
+                                Pause
+                            </button>
+                            &emsp;&emsp;
+                            <button class="btn2" id="terminateButton" onclick="terminate=true;">
+                                Terminate
+                            </button>
+                        </center>
+                    </div>
+                </div>
+
+                <div class="split2">
+                    <center>
+                    <table style="border-collapse: collapse;">
+                        <tr>
+                            <center>
+                                <h4 style="margin-top: 0px; margin-bottom: 5px;">Complexity </h4>
+                            </center>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <center>Time</center>
+                            </td>
+                            <td>
+                                Space
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best Case</td>
+                            <td>Average Case</td>
+                            <td>Worst Case</td>
+                            <td rowspan="2"> <center>O(k)</center> </td>
+                        </tr>
+                        <tr>
+                            <td><center>O(n+k)</center></td>
+                            <td><center>O(n+k)</center></td>
+                            <td><center>O(n+k)</center></td>
+                        </tr>
+                    </table>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../javascript/countingSort.js"></script>
+
+
+        <div id="cover">
+            <div id="description-box">
+                <h2 style="font-family: 'Electrolize', Courier, monospace;">
+                    Counting Sort
+                </h2>
+                <div class="description-content">
+                    <p>
+                        <b>What is the working mechanism of <a href="https://www.geeksforgeeks.org/counting-sort/">Counting Sort</a>, and what is 
+                            the origin of its name?</b> 
+                        <br> <br>
+                        Counting sort is a sorting technique based on keys between a specific range. 
+                        It works by counting the number of objects having distinct key values (a kind of hashing). 
+                        Then do some arithmetic operations to calculate the position of each object in the output sequence. 
+                    </p>
+                    <br>
+                    <p>
+                        <b>Is counting sort a <a href="https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/">stable</a>, 
+                            <a href="https://www.geeksforgeeks.org/in-place-algorithm/">in-place</a> sorting algorithm or an out-of-place sorting algorithm?</b> 
+                        <br> <br>
+                        Counting sort is a stable out-of-place algorithm, meaning that it require extra space and maintains the relative order of duplicates.
+                    </p>
+                    <br>
+                    <p>
+                        <b>How does the number of elements impact the <a href="https://www.khanacademy.org/computing/ap-computer-science-
+                            principles/algorithms-101/evaluating-algorithms/a/measuring-an-algorithms-efficiency">efficiency</a> of Counting sort?</b>
+                        <br> <br>
+                        Counting sort algorithm work best if k is not significantly larger than n. 
+                        In this case the complexity becomes close to O(n) or linear.
+                    </p>
+                    <p>
+                        <b>What are advantages and disadvantages of Counting Sort?</b>
+                        <br> <br>
+                        Advantages:
+                        <ul>
+                            <li>Counting sort generally performs faster than all comparison-based sorting algorithms, 
+                                such as merge sort and quicksort, if the range of input is of the order of the number of input.</li>
+                            <li>Counting sort is easy to code.</li>
+                        </ul>
+                        <br>
+                        Disadvantages:
+                        <ul>
+                            <li>Counting sort doesn't work on decimal values.</li>
+                            <li>Counting sort is inefficient if the range of values to be sorted is very large.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+		    <div class="credits">
+                Got any reccomendation? <a href="../Feedback/isortfeedback.html">It's Feedback Time</a>!
+            </div>
+        </footer>
+  
+    </body>
+</html>
