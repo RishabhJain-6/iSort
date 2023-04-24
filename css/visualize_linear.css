@@ -1,0 +1,217 @@
+
+.screensplit {
+    background-color: black;
+    width: 100%; 
+    height: 100vh;
+  }
+  .hrsplit1 {
+    background-color: black; 
+    width:100%;
+    height: 80%;
+  }
+  
+  .hrsplit2{
+    background-color:black; 
+    width: 100%; 
+    height: 20%;
+  }
+  
+  .vrsplit1 {
+    background-color: black; 
+    width: 70%; 
+    height: 100%; 
+    float:left;
+    margin: 0 auto;
+  }
+
+  .mainarray {
+    background-color: black; 
+    width: 100%; 
+    height: 50%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .countarray {
+    background-color: black; 
+    width: 100%; 
+    height: 50%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .vrsplit2 {
+    background-color: black; 
+    width:29.8%; 
+    height: 100%; 
+    float:left;
+    color: crimson;
+    font-size: x-large;
+    border-width: 2px;
+    border-left-style: solid;
+    border-color: aliceblue;
+    border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
+  }
+  .split1 {
+    width: 70%;
+    height: 100%;
+    float: left;
+    background-color: bisque;
+  }
+  .split2 {
+    width: 29.8%;
+    height: 100%;
+    float: left;
+    background-color:black;
+    color:aliceblue;
+    border-width: 2px;
+    border-left-style: solid;
+    border-color: aliceblue;
+    border-right-style: none;
+    border-top-style: none;
+    border-bottom-style: none;
+  }
+
+  table,th {
+    border-color: aliceblue;
+    border: 2px solid;
+  }
+  td {
+    border-color: aliceblue;
+    border: 2px solid;
+    font-size: smaller;
+    align-items: center;
+  }
+
+  .bar2 {
+    background-color: rgb(236, 190, 53);
+    transition: 0.3s all ease;
+    margin: 0 1px;
+    flex-grow: 1;
+    text-align: center;
+    }
+
+.bar {
+    background-color: rgb(236, 190, 53);
+    transition: 0.3s all ease;
+    margin: 0 1px;
+    flex-grow: 1;
+    text-align: center;
+    }
+
+.bar__id {
+  color: crimson;
+  font-size: xx-small;
+}
+
+.btn1 {
+    padding: 10px;
+    font-weight: bolder;
+    background-color: #a54997;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    border: white;
+    margin-top: 1vw;
+    margin-right: 1vw;
+    user-select: none;
+    }
+.btn2 {
+    padding: 10px;
+    font-weight: bolder;
+    background-color: #a54997;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    border: white;
+    user-select: none;
+    }
+
+  body {
+    background: url(background.jpeg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#header {
+    font-family: 'Oxygen', monospace, Courier;
+    color: white;
+    padding-right: 15px;
+    margin-top: 20vh;
+    font-size: 6vw;
+    letter-spacing: 5px;
+    position: relative;
+    text-align: right;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 850px) {
+    #header {
+        font-size: 10vw;
+        margin-right: 10%;
+    }
+}
+
+#cover {
+    font-family: 'Ubuntu', monospace, Courier;
+    position: relative;
+    width: 100%;
+    min-height: 130vh;
+    display: block;
+    overflow: auto;
+    color: white;
+    background: linear-gradient(0deg, rgba(20, 14, 8, 0.944) 0%, rgba(22,22,22,1) 70%);
+    word-wrap: normal;
+}
+
+#cover a:visited {
+    color:darkgoldenrod;
+}
+
+#cover a {
+    color: #d17f3f;
+}
+
+
+@media only screen and (min-height: 1081px) {
+    #cover {
+        min-height: 100vh;
+    }
+}
+
+#description-box {
+    margin: auto;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    font-size: 25px;
+    max-width: 850px;
+    position: relative;
+}
+
+@media only screen and (max-width: 700px) {
+    #description-box {
+        font-size: 16px;
+    }
+}
+
+#description-box button {
+    background-color: #d17f3f;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 160px;
+    height: 60px;
+    border-radius: 35px;
+    font-size: 25px;
+}
