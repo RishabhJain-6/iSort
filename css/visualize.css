@@ -32,7 +32,7 @@
     height: 100%; 
     float:left;
     color: crimson;
-    font-size: smaller;
+    font-size: revert;
     border-width: 2px;
     border-left-style: solid;
     border-color: aliceblue;
