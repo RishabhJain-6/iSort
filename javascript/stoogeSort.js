@@ -146,6 +146,29 @@ async function Sort() {
     l0.style.backgroundColor=null;
     
     if (terminate) {
+        document.getElementById("Button1").disabled = false;
+        document.getElementById("Button1").style.backgroundColor = "#a54997";
+    
+        document.getElementById("Button2").disabled = false;
+        document.getElementById("Button2").style.backgroundColor = "#a54997";
+    
+        document.getElementById("Button3").disabled = false;
+        document.getElementById("Button3").style.backgroundColor = "#a54997";
+    
+        document.getElementById("Button4").disabled = false;
+        document.getElementById("Button4").style.backgroundColor = "#a54997";
+    
+        document.getElementById("Button5").disabled = false;
+        document.getElementById("Button5").style.backgroundColor = "#a54997";
+    
+        isPlaying = false;
+        pausePlayBtn.textContent = 'Pause';
+    
+        compare.textContent=' ' + " No of Comparisons: ";
+    
+        for (let k=0;k<bars.length;k++) {
+            bars[k].style.backgroundColor="rgb(236, 190, 53)";
+        }
         terminate = !terminate;
     }
     else {
