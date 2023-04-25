@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iSort - The Sort Visualizer </title>\
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+
+        <link href="../css/SideNavIcon.css" rel="stylesheet">
+        <link href="../css/font.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../css/visualize.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style2.css">
+        <link rel= "stylesheet" type= "text/css" href= "../css/style.css">
+    </head>
+
+    <body>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="../javascript/index.js"></script>
+        <div class="sidenav" id="sidenav">
+            <a href="../index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
+            <div id="sep" class="no-remove"></div>
+            <div class="sidenav-title no-remove"><i class="material-icons icon">sort</i> Sorts</div>
+            <a href="bubbleSort.html" class="sidenav-element no-remove">Bubble Sort</a>
+            <a href="selectionSort.html" class="sidenav-element no-remove">Selection Sort</a>
+            <a href="insertionSort.html" class="sidenav-element no-remove">Insertion Sort</a>
+	        <a href="#" class="sidenav-element no-remove">Quick Sort</a>
+	        <a href="#" class="sidenav-element no-remove">Randomized Quick</a>
+            <a href="#" class="sidenav-element no-remove">Heap Sort</a>
+	        <a href="countingSort.html" class="sidenav-element no-remove">Counting Sort</a>
+	        <a href="gnomeSort.html" class="sidenav-element no-remove">Gnome Sort</a>
+	        <a href="stoogeSort.html" class="sidenav-element no-remove">Stooge Sort</a>
+        </div>
+
+        <div class="topnav">
+            <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i class="material-icons icon">menu</i></button>
+            <a href="/" class="topnav-element">SORTING VISUALIZER - MERGE SORT</a>
+             
+        </div>
+      
+        <div class="screensplit">  
+           
+            <div class="hrsplit1">
+                <div class="vrsplit1"></div>
+
+                <div class="vrsplit2" style="overflow-y:scroll;">
+                    <br>
+                    <p id="line0">&nbsp MergeSort(A[],p,r)</p>
+                    <p id="line1">&nbsp &nbsp 1. &nbsp If p < r</p>
+                    <p id="line2">&nbsp &nbsp 2. &nbsp &nbsp q = (p+r)/2</p>
+                    <p id="line3">&nbsp &nbsp 3. &nbsp &nbsp MergeSort(A, p, q)</p>
+                    <p id="line4">&nbsp &nbsp 4. &nbsp &nbsp MergeSort(A, q+1, r)</p>
+                    <p id="line5">&nbsp &nbsp 5. &nbsp &nbsp Merge(A, p, q, r)</p>
+                    <p id="line6">&nbsp &nbsp &emsp; &emsp; 1. &nbsp n1 = q-p+1 & n2 = r-q </p>
+                    <p id="line7">&nbsp &nbsp &emsp; &emsp; 2. &nbsp create L[1..n1], R[1..n2]</p>
+                    <p id="line8">&nbsp &nbsp &emsp; &emsp; 3. &nbsp i =0 & j = 0 </p>
+                    <p id="line9">&nbsp &nbsp &emsp; &emsp; 4. &nbsp while i< n1 & j< n2</p>
+                    <p id="line10">&nbsp &nbsp &emsp; &emsp; 5. &nbsp &ensp; If L[i]<= R[i]</p>
+                    <p id="line11">&nbsp &nbsp &emsp; &emsp; 6. &nbsp &emsp; A[i] <- L[i] </p>
+                    <p id="line12">&nbsp &nbsp &emsp; &emsp; 7. &nbsp &emsp; i++</p>
+                    <p id="line13">&nbsp &nbsp &emsp; &emsp; 8. &nbsp &ensp; Else: </p>
+                    <p id="line14">&nbsp &nbsp &emsp; &emsp; 9. &nbsp &emsp; A[i] <- R[i]</p>
+                    <p id="line15">&nbsp &nbsp &emsp; &emsp; 10. &nbsp &emsp; i++</p>
+                    <p id="line16">&nbsp &nbsp &emsp; &emsp; 11. &nbsp while i< n1</p>
+                    <p id="line17">&nbsp &nbsp &emsp; &emsp; 12. &nbsp &ensp; A[i] <- L[i]</p>
+                    <p id="line18">&nbsp &nbsp &emsp; &emsp; 13. &nbsp &ensp; i++</p>
+                    <p id="line19">&nbsp &nbsp &emsp; &emsp; 14. &nbsp while j< n2</p>
+                    <p id="line20">&nbsp &nbsp &emsp; &emsp; 15 &nbsp &ensp; A[i] <- R[i]</p>
+                    <p id="line21">&nbsp &nbsp &emsp; &emsp; 16. &nbsp &ensp; j++</p>
+                    <p id="line22">&nbsp &nbsp 6. &nbsp End If </p>
+                    <hr size="3" noshade>
+                    <center>
+                        <h4 style="color:aliceblue; margin: 0 0 0 0;" id="comp">No of Comparisons:</h4>
+                    </center>
+		    <hr size="3" noshade>
+                </div> 
+
+            </div>
+            <div class="hrsplit2">
+                <div class="split1">
+                    <div style="margin: auto; width: fit-content">
+                        <center>
+                            
+                            <label style="color:crimson; font-size: 20px;"><b>Number of bars :</b></label>
+                            <input id="nele" type="number" min="1" max="400" value="25"></input>
+
+                            &emsp;
+
+                            <button class="btn1" type="button" onclick="generatebest()" id="Button4">
+                                Generate Best Case Input
+                            </button>
+
+                            <button class="btn1" type="button" onclick="generateworst()" id="Button5">
+                                Generate Worst Case Input
+                            </button>
+                        
+                            &emsp;
+                            <label style="color:crimson; font-size: 20px;"><b>Speed :</b></label>
+                            <input id="speeder" type="range" min="5" max="100" value="40" oninput="delaySet()"></input>
+                            <br>
+
+                            <button class="btn1" type="button" onclick="generate()" id="Button1">
+                                Generate
+                            </button>
+                            &emsp;
+                            <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                                Generate Random Array
+                            </button>
+                            &emsp;
+                            <button class="btn2" onclick="delaySet(),MergeSort(),disable()" id="Button3">
+                                Merge Sort
+                            </button>
+                            &emsp;&emsp;
+                        
+                            <button class="btn2" id="pauseButton">
+                                Pause
+                            </button>
+                            &emsp;&emsp;
+                            <button class="btn2" id="terminateButton" onclick="terminate=true;">
+                                Terminate
+                            </button>
+                        </center>
+                    </div>
+                </div>
+
+                <div class="split2">
+                    <center>
+                    <table style="border-collapse: collapse;">
+                        <tr>
+                            <center>
+                                <h4 style="margin-top: 0px; margin-bottom: 5px;">Complexity </h4>
+                            </center>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <center>Time</center>
+                            </td>
+                            <td>
+                                Space
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best Case</td>
+                            <td>Average Case</td>
+                            <td>Worst Case</td>
+                            <td rowspan="2"> <center>O(n)</center> </td>
+                        </tr>
+                        <tr>
+                            <td><center>O(nlog(n))</center></td>
+                            <td><center>O(nlog(n))</center></td>
+                            <td><center>O(nlog(n))</center></td>
+                        </tr>
+                    </table>
+                </center>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../javascript/mergeSort.js"></script>
+
+
+        <div id="cover">
+            <div id="description-box">
+                <h2 style="font-family: 'Electrolize', Courier, monospace;">
+                    Merge Sort
+                </h2>
+                <div class="description-content">
+                    <p>
+                        <b>What is the working mechanism of <a href="https://www.geeksforgeeks.org/merge-sort/">Merge Sort</a> ?</b> 
+                        <br> <br>
+                        Merge sort is a divide-and-conquer algorithm that works by dividing an array into two halves, sorting each half
+                        separately, and then merging them back together.
+                    </p>
+                    <br>
+                    <p>
+                        <b>Is Merge sort a <a href="https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/">stable</a>, 
+                            <a href="https://www.geeksforgeeks.org/in-place-algorithm/">in-place</a> sorting algorithm or an out-of-place sorting algorithm?</b> 
+                        <br> <br>
+                        Merge sort is an out-of-place sorting algorithm. It requires additional memory space to store the subarrays being merged during the sorting process.
+                        It is Stable.
+                    </p>
+                    <br>
+                    <p>
+                        <b>How does the number of elements impact the <a href="https://www.khanacademy.org/computing/ap-computer-science-
+                            principles/algorithms-101/evaluating-algorithms/a/measuring-an-algorithms-efficiency">efficiency</a> of Merge sort?</b>
+                        <br> <br>
+                        The time complexity of merge sort is O(n log n), where n is the number of elements in the array.
+
+                        When number of elements is small it may not be better than other algos such as insertion sort but when no. of elements 
+                        INCREASES it becomes MORE EFFICIENT as compared to others as it's time complexity grows slower then other algorithms.
+                    </p>
+		    <br>
+                    <p>
+                        <b>What are advantages and disadvantages of Merge Sort?</b>
+                        <br> <br>
+                        Advantages:
+                        <ul>
+                            <li>Merge sort provides a consistent performance, as it always has a time complexity of O(n*log(n)).</li>
+                            <li>It is stable that means order of the elements is maintained.</li>
+                            <li>works efficiently on a wide range of input data types, including arrays, linked lists, and other data structures.</li>
+                            <li>It cam handle large inputs in a reasonable amount of time.</li>
+                        <br>
+                        Disadvantages:
+                        <ul>
+                            <li>Merge sort requires extra space to hold the temporary arrays during the merging process. </li>
+                            <li>Merge sort is a recursive algorithm. Therefore, require a lot of function calls and memory management. </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+		    <div class="credits">
+                Got any reccomendation? <a href="../Feedback/feedbackmain.html">It's Feedback Time</a>!
+            </div>
+        </footer>
+  
+    </body>
+</html>
