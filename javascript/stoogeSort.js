@@ -153,6 +153,7 @@ async function Sort() {
             bars[x].style.backgroundColor = "rgb(49, 226, 13)";
             await new Promise((resolve) => setTimeout(() => { resolve(); }, delay));
         }
+        compare.textContent=' ' + " No of Comparisons: "+count;
     }
 
     document.getElementById("Button1").disabled = false;
@@ -258,6 +259,7 @@ async function StoogeSort(bars,l,h) {
         l3.style.backgroundColor=null;
         l2.style.backgroundColor=null;
     }
+    count++;
     
     await new Promise((resolve) => setTimeout(() => { resolve(); }, delay));
 
