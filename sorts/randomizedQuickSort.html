@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iSort - The Sort Visualizer </title>\
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <link href="../css/SideNavIcon.css" rel="stylesheet">
+    <link href="../css/font.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../css/visualize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style2.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="../javascript/index.js"></script>
+    <div class="sidenav" id="sidenav">
+        <a href="../index.html" class="sidenav-title no-remove"><i class="material-icons icon">home</i> Home</a>
+        <div id="sep" class="no-remove"></div>
+        <div class="sidenav-title no-remove"><i class="material-icons icon">sort</i> Sorts</div>
+        <a href="bubbleSort.html" class="sidenav-element no-remove">Bubble Sort</a>
+        <a href="selectionSort.html" class="sidenav-element no-remove">Selection Sort</a>
+        <a href="insertionSort.html" class="sidenav-element no-remove">Insertion Sort</a>
+        <a href="Quicksort.html" class="sidenav-element no-remove">Quick Sort</a>
+        <a href="mergeSort.html" class="sidenav-element no-remove">Merge Sort</a>
+        <a href="heapSort.html" class="sidenav-element no-remove">Heap Sort</a>
+        <a href="countingSort.html" class="sidenav-element no-remove">Counting Sort</a>
+        <a href="gnomeSort.html" class="sidenav-element no-remove">Gnome Sort</a>
+        <a href="stoogeSort.html" class="sidenav-element no-remove">Stooge Sort</a>
+    </div>
+
+    <div class="topnav">
+        <button class="sidenav-btn topnav-element ripple open" id="sidenav-menu"><i
+                class="material-icons icon">menu</i></button>
+        <a href="/" class="topnav-element">SORTING VISUALIZER - Randomized Quick SORT</a>
+
+    </div>
+
+    <div class="screensplit">
+
+        <div class="hrsplit1">
+            <div class="vrsplit1"></div>
+
+            <div class="vrsplit2" style="font-size: 18px; overflow-y: auto; scrollbar-color: rgba(10, 0, 0, 0.345);">
+                <br>
+                <p id="line0">&nbsp; RandomizedQuickSort(A[],beg,end)</p>
+                <p id="line1">&nbsp; &nbsp; 1. &nbsp; if (beg < end)</p>
+                <p id="line2">&nbsp; &nbsp; 2. &nbsp; &nbsp; pivotIndex = partition(arr,beg, end)</p>
+                <p id="line3">&nbsp; &nbsp; 3. &nbsp; &nbsp; RandomizedQuickSort(arr, beg, pivotIndex)</p>
+                <p id="line4">&nbsp; &nbsp; 4. &nbsp; &nbsp; RandomizedQuickSort(arr, pivotIndex + 1, end)</p>
+                <p id="line5">&nbsp; Randomizedpartition(arr, beg, end)</p>
+                <p id="line6">&nbsp; &nbsp; 1. set random element from the range beg-end</p>
+                <p id="line7">&nbsp; &nbsp; 2. exchange it with beg element</p>
+                <p id="line8">&nbsp; &nbsp; 3. set beg as pivot</p>
+                <p id="line9">&nbsp; &nbsp; 4. small_no_count = 0</p>
+                <p id="line10">&nbsp; &nbsp; 5.for i = beg to end</p>
+                <p id="line11">&nbsp; &nbsp;6.&nbsp; if arr[i] < pivot</p>
+                <p id="line12">&nbsp; &nbsp;7.&nbsp; &nbsp;small_no_count++</p>
+                <p id="line13">&nbsp; &nbsp;8.swap(beg,beg+small_no_count)</p>
+                <p id="line14">&nbsp; &nbsp;9.set i = beg & j = end </p>
+                <p id="line15">&nbsp; &nbsp;10.while i< j </p>
+                <p id="line16">&nbsp; &nbsp;11.&nbsp; if arr[i]<=pivot then i++</p>
+                <p id="line17">&nbsp; &nbsp;12.&nbsp; else if arr[j]>pivot then j--;</p>
+                <p id="line18">&nbsp; &nbsp;13.&nbsp;else swap(i,j)</p>
+                <p id="line19">&nbsp; &nbsp;14.&nbsp;return beg+small_no_count</p>
+
+
+                <hr size="3" noshade>
+                <center>
+                    <h4 style="color:aliceblue; margin: 0 0 0 0;" id="comp">No of Comparisons:</h4>
+                </center>
+                <hr size="3" noshade>
+            </div>
+        </div>
+        <div class="hrsplit2">
+            <div class="split1">
+                <div style="margin: auto; width: fit-content">
+                    <center>
+
+                        <label style="color:crimson; font-size: 20px;"><b>Number of bars :</b></label>
+                        <input id="nele" type="number" min="1" max="400" value="25"></input>
+
+                        &emsp;
+
+                        <button class="btn1" type="button" onclick="generatebest()" id="Button4">
+                            Generate Sorted Input
+                        </button>
+
+                        <button class="btn1" type="button" onclick="generateworst()" id="Button5">
+                            Generate Reverse Sorted Input
+                        </button>
+
+                        &emsp;
+                        <label style="color:crimson; font-size: 20px;"><b>Speed :</b></label>
+                        <input id="speeder" type="range" min="5" max="100" value="40" oninput="delaySet()"></input>
+                        <br>
+
+                        <button class="btn1" type="button" onclick="generate()" id="Button1">
+                            Generate
+                        </button>
+                        &emsp;
+                        <button class="btn1" type="button" onclick="generate2()" id="Button2">
+                            Generate Random Array
+                        </button>
+                        &emsp;
+                        <button class="btn2" onclick="delaySet(),RandomizedQuickSort(),disable()" id="Button3">
+                            Randomized Quick Sort
+                        </button>
+                        &emsp;&emsp;
+
+                        <button class="btn2" id="pauseButton">
+                            Pause
+                        </button>
+                        &emsp;&emsp;
+                        <button class="btn2" id="terminateButton" onclick="terminate=true;">
+                            Terminate
+                        </button>
+                    </center>
+                </div>
+            </div>
+
+            <div class="split2">
+                <center>
+                    <table style="border-collapse: collapse; font-size: large;">
+                        <tr>
+                            <center>
+                                <h4 style="margin-top: 0px; margin-bottom: 5px;">Complexity </h4>
+                            </center>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <center>Time</center>
+                            </td>
+                            <td>
+                                Space
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Best Case</td>
+                            <td>Average Case</td>
+                            <td>Worst Case</td>
+                            <td rowspan="2">
+                                <center>O(1)</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>O(nlogn)</center>
+                            </td>
+                            <td>
+                                <center>O(nlogn)</center>
+                            </td>
+                            <td>
+                                <center>O(n<sup>2</sup>)</center>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../javascript/randomizedQuickSort.js"></script>
+
+
+    <div id="cover">
+        <div id="description-box">
+            <h2 style="font-family: 'Electrolize', Courier, monospace;">
+                Randomized Quick Sort
+            </h2>
+            <div class="description-content">
+                <p>
+                    <b>What is the working mechanism of <a href="https://www.geeksforgeeks.org/quicksort-using-random-pivoting/"> Randomized Quick
+                            Sort</a> </b>
+                    <br> <br>
+                <p>
+                    Randomized quick sort is designed to decrease the chances of 
+                    the algorithm being executed in the worst case time complexity of 
+                    O(n2). The worst case time complexity of quick sort arises when 
+                    the input given is an already sorted list, leading to n(n - 1) 
+                    comparisons. <br>
+                    Making the pivot element a random variable is commonly used method 
+                    in the randomized quick sort. Here, even if the input is sorted, 
+                    the pivot is chosen randomly so the worst case time complexity is avoided.
+                    
+                </p>
+                
+                <br>
+                <p>
+                    <b>Is randomized Quick sort a <a
+                            href="https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/">stable</a>,
+                        <a href="https://www.geeksforgeeks.org/in-place-algorithm/">in-place</a> sorting algorithm or an
+                        out-of-place sorting algorithm?</b>
+                    <br> <br>
+                    Randomized Quick sort is not a stable algorithm ,meaning that it won't be guaranteed
+                    to preserve the order of elements as it reorders; two elements that are 
+                    exactly the same in the unsorted array could show up in a reversed order 
+                    in the sorted one! Stability ends up being what causes people to choose 
+                    merge sort over quicksort, and it's the one area where merge sort appears 
+                    as the obvious winner.<br><br>
+                    It needs memory in order of O(log n) this completely disqualifies quicksort as 
+                    an in-place algorithm. However, quicksort is always considered to be in-place, 
+                    it sorts the elements within the array with at most a constant amount of them 
+                    outside the array at any given time.
+                </p>
+                <br>
+                <p>
+                    <b>How does the number of elements impact the <a
+                            href="https://www.khanacademy.org/computing/ap-computer-science-
+                            principles/algorithms-101/evaluating-algorithms/a/measuring-an-algorithms-efficiency">efficiency</a> of Randomized Quick sort?</b>
+                    <br> <br>
+                    As the number of elements being sorted increases, the probability of selecting a good pivot element by chance also increases, 
+                    which improves the performance of randomized quicksort. However, if the input list is already sorted or nearly sorted, 
+                    its performance can degrade significantly, and other sorting algorithms like merge sort may be more suitable.
+                </p>
+                <br>
+                <p>
+                    <b>What are advantages and disadvantages of Randomized Quick Sort?</b>
+                    <br> <br>
+                    Advantages:
+                <ul>
+                    <li>It is a divide-and-conquer algorithm that makes it easier to solve problems.</li>
+                    <li>It is efficient on large data sets.</li>
+                    <li>It has a low overhead, as it only requires a small amount of memory to function.</li>
+                    
+                </ul>
+                <br>
+                Disadvantages:
+                <ul>
+                    <li>It has a worst-case time complexity of O(n^2), which occurs when the pivot is chosen poorly.</li>
+                    <li>It is not a good choice for small data sets.</li>
+                    <li>It can be sensitive to the choice of pivot.</li>
+                    <li>The use of randomness in selecting the pivot element can lead to variations in the algorithm's 
+                        performance and makes it harder to analyze its worst-case behavior.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="credits">
+            Got any reccomendation? <a href="../Feedback/feedbackmain.html">It's Feedback Time</a>!
+        </div>
+    </footer>
+
+</body>
+
+</html>
