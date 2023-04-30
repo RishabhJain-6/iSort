@@ -569,6 +569,7 @@ async function Randomizedquicksort(bars, low, high) {
 
 async function RandomizedQuickSort() {
     let bars = document.querySelectorAll(".bar");
+    count = 0;
 
     l0.style.backgroundColor = "lightgreen";
 
