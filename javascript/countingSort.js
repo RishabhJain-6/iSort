@@ -118,7 +118,7 @@ function generateCountArray() {
 
 		const barLabel = document.createElement("label");
 		barLabel.classList.add("bar__id");
-	    barLabel.innerHTML = i+","+00;
+	    barLabel.innerHTML = i+","+0;
 
 		bar.appendChild(barLabel);
 	    C_container.appendChild(bar);
