@@ -280,6 +280,7 @@ async function selectionSort() {
                 l5.style.backgroundColor = "cyan";
                 await new Promise((resolve) => setTimeout(() => { resolve(); }, delay));
                 l5.style.backgroundColor = null;
+                count++;
             }
             count++;
         }
@@ -314,6 +315,7 @@ async function selectionSort() {
             bars[min_idx].style.backgroundColor = "rgb(236, 190, 53)";
             bars[i].style.backgroundColor = "rgb(236, 190, 53)";
         }
+        count++;
 
         bars[i].style.backgroundColor = "rgb(236, 190, 53)";
 
