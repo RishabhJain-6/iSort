@@ -278,8 +278,8 @@ async function BubbleSort() {
                 bars[j + 1].childNodes[0].innerText = temp2;
 
                 l4.style.backgroundColor = null;
+		c2 = c2+1;
             }
-            c2 = c2+1;
 
             var l5 = document.getElementById("line5");
             l5.style.backgroundColor = "cyan";
