@@ -56,44 +56,7 @@
 
 ## 📁 File Structure
 
-iSort/├── index.html            # Main entry point
-├── favicon.ico           # Website icon
-├── .gitattributes        # Specifies how Git handles line endings
-├── css/                  # Stylesheets
-│   ├── SideNavIcon.css
-│   ├── font.css│   
-├── style.css         # Main styles
-│   ├── style1.css
-│   ├── style2.css
-│   ├── visualize.css     # Visualization styles
-│   ├── visualize_linear.css
-│   └── background.jpeg   # Background image
-├── javascript/           # JavaScript files
-│   ├── index.js          # Main application logic
-│   ├── bubbleSort.js       # Implementation of Bubble Sort
-│   ├── selectionSort.js    # Implementation of Selection Sort
-│   ├── insertionSort.js    # Implementation of Insertion Sort
-│   ├── quickSort.js        # Implementation of Quick Sort
-│   ├── randomizedQuickSort.js  # Implementation of Randomized Quick Sort
-│   ├── mergeSort.js        # Implementation of Merge Sort
-│   ├── heapSort.js         # Implementation of Heap Sort
-│   ├── countingSort.js     # Implementation of Counting Sort
-│   ├── gnomeSort.js        # Implementation of Gnome Sort
-│   └── stoogeSort.js       # Implementation of Stooge Sort
-├── sorts/                # HTML files for individual sort algorithm pages (May be redundant)
-│   ├── bubbleSort.html
-│   ├── selectionSort.html
-│   ├── insertionSort.html
-│   ├── quickSort.html
-│   ├── randomizedQuickSort.html
-│   ├── mergeSort.html
-│   ├── heapSort.html
-│   ├── countingSort.html
-│   ├── gnomeSort.html
-│   └── stoogeSort.html
-├── Feedback/             # Feedback related files
-│   └── feedbackmain.html
-
+iSort/├── index.html            # Main entry point├── favicon.ico           # Website icon├── .gitattributes        # Specifies how Git handles line endings├── css/                  # Stylesheets│   ├── SideNavIcon.css│   ├── font.css│   ├── style.css         # Main styles│   ├── style1.css│   ├── style2.css│   ├── visualize.css     # Visualization styles│   ├── visualize_linear.css│   └── background.jpeg   # Background image├── javascript/           # JavaScript files│   ├── index.js          # Main application logic│   ├── bubbleSort.js       # Implementation of Bubble Sort│   ├── selectionSort.js    # Implementation of Selection Sort│   ├── insertionSort.js    # Implementation of Insertion Sort│   ├── quickSort.js        # Implementation of Quick Sort│   ├── randomizedQuickSort.js  # Implementation of Randomized Quick Sort│   ├── mergeSort.js        # Implementation of Merge Sort│   ├── heapSort.js         # Implementation of Heap Sort│   ├── countingSort.js     # Implementation of Counting Sort│   ├── gnomeSort.js        # Implementation of Gnome Sort│   └── stoogeSort.js       # Implementation of Stooge Sort├── sorts/                # HTML files for individual sort algorithm pages (May be redundant)│   ├── bubbleSort.html│   ├── selectionSort.html│   ├── insertionSort.html│   ├── quickSort.html│   ├── randomizedQuickSort.html│   ├── mergeSort.html│   ├── heapSort.html│   ├── countingSort.html│   ├── gnomeSort.html│   └── stoogeSort.html├── Feedback/             # Feedback related files│   └── feedbackmain.html
 ---
 
 ## 💡 Sorting Algorithms Visualized
@@ -168,7 +131,3 @@ We welcome contributions to iSort! If you'd like to contribute, please follow th
 Please make sure your code follows the project's coding style and includes appropriate tests.
 
 ---
-
-## 📄 License
-
-iSort is open-source software licensed under the [MIT License](LICENSE).
