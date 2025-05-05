@@ -152,7 +152,7 @@ For questions, suggestions, or bug reports, please contact us:
 
 ## 🙏 Feedback
 
-We welcome your feedback! Help us make iSort even better by providing your suggestions and reporting any issues you encounter. [Give us your feedback]([link-to-your-feedback-page](https://rishabhjain-6.github.io/iSort/Feedback/feedbackmain.html)).
+We welcome your feedback! Help us make iSort even better by providing your suggestions and reporting any issues you encounter. [Give us your feedback]([https://rishabhjain-6.github.io/iSort/Feedback/feedbackmain.html]).
 
 ---
 
