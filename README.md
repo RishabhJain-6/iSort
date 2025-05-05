@@ -56,15 +56,13 @@
 
 ## 📁 File Structure
 
-
-iSort/
-├── index.html            # Main entry point
+iSort/├── index.html            # Main entry point
 ├── favicon.ico           # Website icon
 ├── .gitattributes        # Specifies how Git handles line endings
 ├── css/                  # Stylesheets
 │   ├── SideNavIcon.css
-│   ├── font.css
-│   ├── style.css         # Main styles
+│   ├── font.css│   
+├── style.css         # Main styles
 │   ├── style1.css
 │   ├── style2.css
 │   ├── visualize.css     # Visualization styles
@@ -95,7 +93,6 @@ iSort/
 │   └── stoogeSort.html
 ├── Feedback/             # Feedback related files
 │   └── feedbackmain.html
-
 
 ---
 
@@ -171,3 +168,7 @@ We welcome contributions to iSort! If you'd like to contribute, please follow th
 Please make sure your code follows the project's coding style and includes appropriate tests.
 
 ---
+
+## 📄 License
+
+iSort is open-source software licensed under the [MIT License](LICENSE).
