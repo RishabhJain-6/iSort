@@ -127,6 +127,7 @@ Each algorithm's visualization is accompanied by dynamic visual representations.
 * Add test cases to ensure the correctness of the visualizations.
 * Implement a dark mode.
 * Improve mobile responsiveness.
+* Extend beyond sorting — evolve the platform into a full-fledged Algorithm Visualizer with support for searching, graph algorithms (BFS, DFS, Dijkstra), dynamic programming, and more.
 
 ---
 
