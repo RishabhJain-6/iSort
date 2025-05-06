@@ -170,3 +170,10 @@ We welcome contributions to iSort! If you'd like to contribute, please follow th
 Please make sure your code follows the project's coding style and includes appropriate tests.
 
 ---
+
+## 📄 Research Paper
+
+An in-depth research paper titled **"Sorting Algorithms Demystified: A Comprehensive Guide with the iSort Visualizer"** has been written, which explores the **iSort** visualizer and its comparative analysis with other sorting tools. 
+The paper provides further insights into the design, technical features, and pedagogical importance of **iSort** as a sorting algorithm learning tool. 
+
+You can access the paper for a more detailed understanding [here](https://ijisae.org/index.php/IJISAE/article/view/6645).
