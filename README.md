@@ -143,7 +143,7 @@ Each algorithm's visualization is accompanied by dynamic visual representations.
 
 For questions, suggestions, or bug reports, please contact us:
 
-* rishabh4124@rla.du.ac.in
+* rishabhjain61002@gmail.com
 * rishabh4087@rla.du.ac.in
 * deepanshu4129@rla.du.ac.in
 * priyanshu4035@rla.du.ac.in
